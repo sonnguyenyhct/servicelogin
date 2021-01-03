@@ -1,0 +1,14 @@
+
+
+<ul>
+  <li *ngFor="let word of listWord">
+    <a [routerLink]="['/dictionary2',word.key]">
+      {{word.key}}
+    </a>
+  </li>
+</ul>
+<div>
+  <button (click)="authService.login()">Login</button>
+  <button (click)="authService.logout()">Logout</button>
+</div>
+<router-outlet></router-outlet>
